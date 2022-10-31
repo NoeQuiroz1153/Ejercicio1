@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1.vistas.Master"
+             Title="Master">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MENU!"/>
+
+            <Button Text="Calculadora" ContentLayout="Left,10" Image="calc.png"  HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" BackgroundColor="White" Margin="0,0,0,0" FontSize="Medium" x:Name="btnCalcu" Clicked="btnCalcu_Clicked"  />
+            <Button Text="Correo" ContentLayout="Left,05" Image="corre.png"  HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" BackgroundColor="White" Margin="6,5,65,0" FontSize="Medium" x:Name="btnCorrep" Clicked="btnCorrep_Clicked"  />
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

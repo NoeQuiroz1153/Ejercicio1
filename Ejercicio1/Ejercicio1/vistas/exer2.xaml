@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1.vistas.exer2"
+             Title="Agregar Contacto">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="AliceBlue" >
+            
+            <Frame VerticalOptions="FillAndExpand" Margin="20,20,20,20">
+                
+                <StackLayout BackgroundColor="White" Spacing="10">
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Entry x:Name ="nombre" Placeholder="Ingrese Nombre" Keyboard="Text" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    </Frame>
+                    
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Entry x:Name ="apellido" Placeholder="Ingrese Apellido" Keyboard="Text" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    </Frame>
+
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Entry x:Name ="edad" Placeholder="Ingrese Edad" Keyboard="Numeric" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    </Frame>
+
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Entry x:Name ="pais" Placeholder="Seleccione un Pais" Keyboard="Text" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    </Frame>
+                                     
+                   
+                    
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Entry x:Name ="nota" Placeholder="Ingrese una Nota" Keyboard="Chat" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    </Frame>
+
+                    <Button Text="Guardar Contacto" ContentLayout="Left,10" Image="send.png"  HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" BackgroundColor="White" Margin="5,0,0,0" FontSize="Large" x:Name="btnenviar" Clicked="btnenviar_Clicked"/>
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
