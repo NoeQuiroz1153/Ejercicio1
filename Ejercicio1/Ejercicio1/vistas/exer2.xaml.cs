@@ -25,14 +25,16 @@ namespace Ejercicio1.vistas
             nombre.Text = contactos.Nombre;
             apellido.Text = contactos.Apellido;
             edad.Text = Convert.ToString(contactos.Edad);
-            pais.Text = contactos.Pais;
+            var pick = Convert.ToString(pickerpais.ItemsSource);
+            pick = contactos.Pais;
             nota.Text = contactos.Nota;
             nombre.Focus();
 
         }
          async void btnenviar_Clicked(object sender, EventArgs e)
         {
-           if (string.IsNullOrEmpty(nombre.Text) || string.IsNullOrEmpty(apellido.Text) || string.IsNullOrEmpty(edad.Text) || string.IsNullOrEmpty(pais.Text))
+            var pick = Convert.ToString(pickerpais.ItemsSource);
+            if (string.IsNullOrEmpty(nombre.Text) || string.IsNullOrEmpty(apellido.Text) || string.IsNullOrEmpty(edad.Text) || string.IsNullOrEmpty(pick))
             {
                 await DisplayAlert("Incompleto", "Necesita llenar todos los campos", "ok");
             }
@@ -54,7 +56,7 @@ namespace Ejercicio1.vistas
                 Nombre = nombre.Text,
                 Apellido = apellido.Text,
                 Edad = Convert.ToInt32(edad.Text),
-                Pais = pais.Text,
+                Pais = Convert.ToString(pickerpais.SelectedIndex),
                 Nota = nota.Text,
             });
           await Navigation.PopAsync();
@@ -65,7 +67,7 @@ namespace Ejercicio1.vistas
             _contactos.Nombre = nombre.Text;
             _contactos.Apellido = apellido.Text;
             _contactos.Edad = Convert.ToInt32(edad.Text);
-            _contactos.Pais = pais.Text;
+            _contactos.Pais =Convert.ToString(pickerpais.Items);
             _contactos.Nota = nota.Text;
             await App.Database.Updatecontacto(_contactos);
             await Navigation.PopAsync();

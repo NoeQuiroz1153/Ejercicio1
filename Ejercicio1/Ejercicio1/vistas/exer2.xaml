@@ -20,12 +20,24 @@
                     <Frame HasShadow="True" CornerRadius="15">
                         <Entry x:Name ="edad" Placeholder="Ingrese Edad" Keyboard="Numeric" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
                     </Frame>
-
-                    <Frame HasShadow="True" CornerRadius="15">
-                        <Entry x:Name ="pais" Placeholder="Seleccione un Pais" Keyboard="Text" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
+                    
+                    <Frame>
+                        <Picker Title="Pais"
+                                x:Name="pickerpais"
+                                FontAttributes="Bold">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                <x:String>Honduras</x:String>
+                                <x:String>Mexico</x:String>
+                                <x:String>Usa</x:String>
+                                <x:String>Canada</x:String>
+                                <x:String>Brasil</x:String>
+                                <x:String>España</x:String>
+                                <x:String>UK</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
                     </Frame>
-                                     
-                   
                     
                     <Frame HasShadow="True" CornerRadius="15">
                         <Entry x:Name ="nota" Placeholder="Ingrese una Nota" Keyboard="Chat" FontAttributes="Bold" PlaceholderColor="Black"></Entry>
